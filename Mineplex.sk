@@ -2885,7 +2885,7 @@ function rewardTreasure(p: player , c: number , l: number , s: number) :: number
 				broadcast "&9Treasure> &e%{_p}% &7found &aLegendary %{_ra}% Shards&7."
 				addShards({_p}, {_ra})
 				wait 2.25 seconds
-			execute console command "/updaterank %{_p}% %{_ra}%"
+			execute console command "/rank %{_p}% %{_ra}%"
 			broadcast "&9Treasure> &e%{_p}% &7found &cMythical %{_ra}% Rank&7."
 			send all players title "&eTreasure" with subtitle "&f%{_p}% has found &cMythical Rank Upgrade" for 10 seconds
 		else if {_r} is 45 or 46 or 47 or 48 or 49 or 51 or 52 or 53 or 54 or 55:
@@ -5108,13 +5108,13 @@ command /locate [<string>]:
 		else:
 			send "&9Locate> &7Player argument missing."
 
-command /updaterank [<offline player>] [<string>]:
+command /rank [<offline player>] [<string>]:
 	permission: mineplex.admin
 	permission message: &9Permissions> &7This requires Permission Rank [&9ADMIN&7].
 	trigger:
 		if argument 1 or argument 2 is not set:
 			send "&9Client Manager> &7Listing Rank Update Commands:"
-			send "&f/updaterank (player) (rank): &eupdates chosen player's rank to the chosen rank"
+			send "&f/rank (player) (rank): &eupdates chosen player's rank to the chosen rank"
 			send ""
 			send "&9Rank Update> &7Listing Rank List:"
 			send "&9Ranks> &7ALL"
@@ -5126,8 +5126,6 @@ command /updaterank [<offline player>] [<string>]:
 			send "&9Ranks> &7TRAINEE"
 			send "&9Ranks> &7MODERATOR"
 			send "&9Ranks> &7SNR_MODERATOR"
-			send "&9Ranks> &7CLANS_MOD"
-			send "&9Ranks> &7JNR_DEV"
 			send "&9Ranks> &7SUPPORT"
 			send "&9Ranks> &7ADMIN"
 			send "&9Ranks> &7LEADER"
