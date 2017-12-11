@@ -3555,35 +3555,35 @@ function rankLoad(p: player , n: number , t: number) :: string:
 			set {mineplex.colora.%{_p}%} to "§f"
 			return "&fPlayer"
 		if {mineplex.rank.%{_p}%} is "&b&lULTRA ":
-			execute console command "/updaterank %{_p}% ULTRA"
+			execute console command "/rank %{_p}% ULTRA"
 			set {_p} tab name to "&b&lULTRA &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&bUltra"
 			set {mineplex.colora.%{_p}%} to "§b"
 			set {mineplex.hover.%{_p}%} to "&b&lULTRA%nl%&fA first step into the stories of the mist.%nl%&fOnly those brave enough may enter.%nl% %nl%&fThe first purchasable rank at %{mineplex.config.shoplink}%"
 			return "&bUltra"
 		if {mineplex.rank.%{_p}%} is "&d&lHERO ":
-			execute console command "/updaterank %{_p}% HERO"
+			execute console command "/rank %{_p}% HERO"
 			set {_p} tab name to "&d&lHERO &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&dHero"
 			set {mineplex.colora.%{_p}%} to "§d"
 			set {mineplex.hover.%{_p}%} to "&d&lHERO%nl%&fThere are many stories of a%nl%&fvaliant Hero who was brave enough to%nl%&ftame the most fearsome dragon in the land.%nl% %nl%&fThe second purchasable rank at %{mineplex.config.shoplink}%"
 			return "&dHero"
 		if {mineplex.rank.%{_p}%} is "&a&lLEGEND ":
-			execute console command "/updaterank %{_p}% LEGEND"
+			execute console command "/rank %{_p}% LEGEND"
 			set {_p} tab name to "&a&lLEGEND &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&aLegend"
 			set {mineplex.colora.%{_p}%} to "§a"
 			set {mineplex.hover.%{_p}%} to "&a&lLEGEND%nl%&fYears they have told stories of this rank,%nl%&fonly for the legends to be true.%nl% %nl%&fThe third purchasable rank at %{mineplex.config.shoplink}%"
 			return "&aLegend"
 		if {mineplex.rank.%{_p}%} is "&c&lTITAN ":
-			execute console command "/updaterank %{_p}% TITAN"
+			execute console command "/rank %{_p}% TITAN"
 			set {_p} tab name to "&c&lTITAN &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&cTitan"
 			set {mineplex.colora.%{_p}%} to "§c"
 			set {mineplex.hover.%{_p}%} to "&c&lTITAN%nl%&fAncient myths spoke of a gigantic being%nl%&fwith immence power...%nl% %nl%&fThe fourth purchasable rank at %{mineplex.config.shoplink}%"
 			return "&cTitan"
 		if {mineplex.rank.%{_p}%} is "&6&lTRAINEE ":
-			execute console command "/updaterank %{_p}% TRAINEE"
+			execute console command "/rank %{_p}% TRAINEE"
 			loop {mineplex.patreon::*}: #Do not worry about this. It only has to do with my test server, not you guys <3
 				if loop-value is {_p}:
 					set {_p} tab name to "&6&lP.TRAINEE &e%{_p}%"
@@ -3595,7 +3595,7 @@ function rankLoad(p: player , n: number , t: number) :: string:
 			set {mineplex.hover.%{_p}%} to "&6&lTRAINEE%nl%&fTrainee are moderators-in-training.%nl%&ftheir duties include enforcing the rules and%nl%&fproviding help to anyone with questions or concerns.%nl% %nl%&fFor assistance, contact them using &e/a <message>&f."
 			return "&6Trainee"
 		if {mineplex.rank.%{_p}%} is "&6&lMOD ":
-			execute console command "/updaterank %{_p}% MODERATOR"
+			execute console command "/rank %{_p}% MODERATOR"
 			loop {mineplex.patreon::*}: #Do not worry about this. It only has to do with my test server, not you guys <3
 				if loop-value is {_p}:
 					set {_p} tab name to "&6&lP.MOD &e%{_p}%"
@@ -3606,7 +3606,7 @@ function rankLoad(p: player , n: number , t: number) :: string:
 			set {mineplex.hover.%{_p}%} to "&6&lMOD%nl%&fModerators enforce rules and provide help to%nl%&fanyone with questions or concerns.%nl% %nl%&fFor assistance, contact them using &e/a <message>&f."
 			return "&6Mod"
 		if {mineplex.rank.%{_p}%} is "&6&lSR.MOD ":
-			execute console command "/updaterank %{_p}% SNR_MODERATOR"
+			execute console command "/rank %{_p}% SNR_MODERATOR"
 			loop {mineplex.patreon::*}: #Do not worry about this. It only has to do with my test server, not you guys <3
 				if loop-value is {_p}:
 					set {_p} tab name to "&6&lP.SR.MOD &e%{_p}%"
@@ -3616,15 +3616,8 @@ function rankLoad(p: player , n: number , t: number) :: string:
 			set {mineplex.colora.%{_p}%} to "§6"
 			set {mineplex.hover.%{_p}%} to "&6&lSR.MOD%nl%&fSenior Moderators are members of a special%nl%&fSenior Moderators team where they have to fulfull specific tasks.%nl%&fJust like Moderators, you can always ask them for help.%nl% %nl%&fFor assistance, contact them using &e/a <message>&f."
 			return "&6Sr.Mod"
-		if {mineplex.rank.%{_p}%} is "&6&lC.MOD ":
-			execute console command "/updaterank %{_p}% CLANS_MOD"
-			set {_p} tab name to "&6&lC.MOD &e%{_p}%"
-			set {mineplex.displaya.%{_p}%} to "&6C.Mod"
-			set {mineplex.colora.%{_p}%} to "§6"
-			set {mineplex.hover.%{_p}%} to "&6&lC.MOD%nl%&fClans Moderators are members of a special%nl%&fSenior Moderators team where they focus on helping the clans servers.%nl%&fJust like Moderators, you can always ask them for help.%nl% %nl%&fFor assistance, contact them using &e/a <message>&f."
-			return "&6C.Mod"
 		if {mineplex.rank.%{_p}%} is "&4&lADMIN ":
-			execute console command "/updaterank %{_p}% ADMIN"
+			execute console command "/rank %{_p}% ADMIN"
 			loop {mineplex.patreon::*}: #Do not worry about this. It only has to do with my test server, not you guys <3
 				if loop-value is {_p}:
 					set {_p} tab name to "&6&lP.ADMIN &e%{_p}%"
@@ -3635,14 +3628,14 @@ function rankLoad(p: player , n: number , t: number) :: string:
 			set {mineplex.hover.%{_p}%} to "&4&lADMIN%nl%&fAn Administrator's role is to manage%nl%&ftheir respective Senoir Moderator team%nl%&fand all moderators within it."
 			return "&4Admin"
 		if {mineplex.rank.%{_p}%} is "&9&lAPEX ":
-			execute console command "/updaterank %{_p}% APEX"
+			execute console command "/rank %{_p}% APEX"
 			set {_p} tab name to "&9&lAPEX &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&9Apex"
 			set {mineplex.colora.%{_p}%} to "§4"
 			set {mineplex.hover.%{_p}%} to "&9&lAPEX%nl%&fStaff at Apex Hosting. These guys help support the test server!"
 			return "&9Apex"
 		if {mineplex.rank.%{_p}%} is "&4&lLEADER ":
-			execute console command "/updaterank %{_p}% LEADER"
+			execute console command "/rank %{_p}% LEADER"
 			loop {mineplex.patreon::*}: #Do not worry about this. It only has to do with my test server, not you guys <3
 				if loop-value is {_p}:
 					set {_p} tab name to "&6&lP.LEADER &e%{_p}%"
@@ -3653,7 +3646,7 @@ function rankLoad(p: player , n: number , t: number) :: string:
 			set {mineplex.hover.%{_p}%} to "&4&lLEADER%nl%&fLeaders manage the operation of their respective team%nl%&for projects. They usually operate on affairs within%nl%&fthe staff, development, or management team."
 			return "&4Leader"
 		if {mineplex.rank.%{_p}%} is "&4&lOWNER ":
-			execute console command "/updaterank %{_p}% OWNER"
+			execute console command "/rank %{_p}% OWNER"
 			loop {mineplex.patreon::*}: #Do not worry about this. It only has to do with my test server, not you guys <3
 				if loop-value is {_p}:
 					set {_p} tab name to "&6&lP.OWNER &e%{_p}%"
@@ -3664,82 +3657,76 @@ function rankLoad(p: player , n: number , t: number) :: string:
 			set {mineplex.hover.%{_p}%} to "&4&lOWNER%nl%&fOwners are the founders of Mineplex.%nl%&fEach owner manages a different aspect of the%nl%server and ensures its efficient operation."
 			return "&4Owner"
 		if {mineplex.rank.%{_p}%} is "&9&lBUILDER ":
-			execute console command "/updaterank %{_p}% BUILDER"
+			execute console command "/rank %{_p}% BUILDER"
 			set {_p} tab name to "&9&lBUIDLER &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&9Mapper"
 			set {mineplex.colora.%{_p}%} to "§9"
 			set {mineplex.hover.%{_p}%} to "&9&lBUILDER%nl%&fBuilders are members of the Mineplex Build Team.%nl%&fThey create many of the maps used across Mineplex."
 			return "&9Builder"
 		if {mineplex.rank.%{_p}%} is "&9&lMAPPER ":
-			execute console command "/updaterank %{_p}% MAPPER"
+			execute console command "/rank %{_p}% MAPPER"
 			set {_p} tab name to "&9&lMAPPER &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&9Mapper"
 			set {mineplex.colora.%{_p}%} to "§9"
 			set {mineplex.hover.%{_p}%} to "&9&lMAPPER%nl%&fThese senior members work closely with the development and design teams to build new maps for new and old content!"
 			return "&9Mapper"
 		if {mineplex.rank.%{_p}%} is "&9&lMAPLEAD ":
-			execute console command "/updaterank %{_p}% MAPLEAD"
+			execute console command "/rank %{_p}% MAPLEAD"
 			set {_p} tab name to "&9&lMAPLEAD &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&9MapLead"
 			set {mineplex.colora.%{_p}%} to "§9"
 			set {mineplex.hover.%{_p}%} to "&9&lMAPLEAD%nl%&fMap Leaders are leaders of the Mineplex Build Team.%nl%&fThey oversee the creation of new maps and manage Builders."
 			return "&9MapLead"
-		if {mineplex.rank.%{_p}%} is "&6&lJR.DEV ":
-			execute console command "/updaterank %{_p}% JNR_DEV"
-			set {mineplex.displaya.%{_p}%} to "&6Jr.Dev"
-			set {mineplex.colora.%{_p}%} to "§c"
-			set {mineplex.hover.%{_p}%} to "&6&lJR.DEV%nl%&fThese are part time Developers that work behind the%nl%&fscenes to create new games and features,%nl%&fand fix bugs to give the best experience."
-			return "&6Jr.Dev"
 		if {mineplex.rank.%{_p}%} is "&4&lDEV ":
-			execute console command "/updaterank %{_p}% DEVELOPER"
+			execute console command "/rank %{_p}% DEVELOPER"
 			set {_p} tab name to "&4&lDEV &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&4Dev"
 			set {mineplex.colora.%{_p}%} to "§4"
 			set {mineplex.hover.%{_p}%} to "&4&lDEV%nl%&fDevelopers work behind the scenes to%nl%&fcreate new games and features, and fix bugs to%nl%&fgive the best experience."
 			return "&4Dev"
 		if {mineplex.rank.%{_p}%} is "&5&lTWITCH ":
-			execute console command "/updaterank %{_p}% TWITCH"
+			execute console command "/rank %{_p}% TWITCH"
 			set {_p} tab name to "&5&lTWITCH &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&5Twitch"
 			set {mineplex.colora.%{_p}%} to "§5"
 			set {mineplex.hover.%{_p}%} to "&5&lTWITCH%nl%&fA Twitch streamer who often features%nl%&fMinepex in their streams."
 			return "&5Twitch"
 		if {mineplex.rank.%{_p}%} is "&c&lYOUTUBE ":
-			execute console command "/updaterank %{_p}% YOUTUBE"
+			execute console command "/rank %{_p}% YOUTUBE"
 			set {_p} tab name to "&c&lYOUTUBE &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&cYouTube"
 			set {mineplex.colora.%{_p}%} to "§c"
 			set {mineplex.hover.%{_p}%} to "&c&lYOUTUBE%nl%&fA YouTuber who creates content for%nl%&for related to Mineplex.%nl%&fThey are the official YouTubers of Mineplex."
 			return "&cYouTube"
 		if {mineplex.rank.%{_p}%} is "&f&lEVENT ":
-			execute console command "/updaterank %{_p}% EVENT"
+			execute console command "/rank %{_p}% EVENT"
 			set {_p} tab name to "&f&lEVENT &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&fEvent"
 			set {mineplex.colora.%{_p}%} to "§f"
 			set {mineplex.hover.%{_p}%} to "&f&lEVENT%nl%&f???"
 			return "&fEvent"
 		if {mineplex.rank.%{_p}%} is "&5&lYT ":
-			execute console command "/updaterank %{_p}% YT"
+			execute console command "/rank %{_p}% YT"
 			set {_p} tab name to "&5&lYT &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&5YT"
 			set {mineplex.colora.%{_p}%} to "§5"
 			set {mineplex.hover.%{_p}%} to "&5&lYT%nl%&fA YouTuber who creates content for%nl%&for related to Mineplex."
 			return "&5YT"
 		if {mineplex.rank.%{_p}%} is "&3&lETERNAL ":
-			execute console command "/updaterank %{_p}% ETERNAL"
+			execute console command "/rank %{_p}% ETERNAL"
 			set {_p} tab name to "&3&lETERNAL &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&3Eternal"
 			set {mineplex.colora.%{_p}%} to "§3"
 			set {mineplex.hover.%{_p}%} to "&3&lETERNAL%nl%&fFantastic and magical, no one%nl%&fexcept the time lords truly understand%nl%&fthe power of this rank.%nl% %nl%&fThe fifth purchasable rank at %{mineplex.config.shoplink}%"
 			return "&3Eternal"
 		if {mineplex.rank.%{_p}%} is "&9&lSUPPORT ":
-			execute console command "/updaterank %{_p}% SUPPORT"
+			execute console command "/rank %{_p}% SUPPORT"
 			set {mineplex.displaya.%{_p}%} to "&9Support"
 			set {mineplex.colora.%{_p}%} to "§9"
 			set {mineplex.hover.%{_p}%} to "&9&lSUPPORT%nl%&fSupport agents handle tickets and%nl%&fprovide customer service."
 			return "&9Support"
 		if {mineplex.rank.%{_p}%} is "&9&lARTIST ":
-			execute console command "/updaterank %{_p}% ARTIST"
+			execute console command "/rank %{_p}% ARTIST"
 			set {mineplex.displaya.%{_p}%} to "&9Artist"
 			set {mineplex.colora.%{_p}%} to "§9"
 			set {mineplex.hover.%{_p}%} to "&9&lARTIST%nl%&fThe Artist rank is given to talented artists%nl%who are endorsed to create content for Mineplex."
@@ -3798,12 +3785,6 @@ function rankLoad(p: player , n: number , t: number) :: string:
 			set {mineplex.colora.%{_p}%} to "§6"
 			set {mineplex.hover.%{_p}%} to "&6&lSR.MOD%nl%&fSenior Moderators are members of a special%nl%&fSenior Moderators team where they have to fulfull specific tasks.%nl%&fJust like Moderators, you can always ask them for help.%nl% %nl%&fFor assistance, contact them using &e/a <message>&f."
 			return "&6Sr.Mod"
-		if {mineplex.rank.%{_p}%} is "&6&lC.MOD ":
-			set {_p} tab name to "&6&lC.MOD &e%{_p}%"
-			set {mineplex.displaya.%{_p}%} to "&6C.Mod"
-			set {mineplex.colora.%{_p}%} to "§6"
-			set {mineplex.hover.%{_p}%} to "&6&lC.MOD%nl%&fClans Moderators are members of a special%nl%&fSenior Moderators team where they focus on helping the clans servers.%nl%&fJust like Moderators, you can always ask them for help.%nl% %nl%&fFor assistance, contact them using &e/a <message>&f."
-			return "&6C.Mod"
 		if {mineplex.rank.%{_p}%} is "&4&lADMIN ":
 			set {_p} tab name to "&4&lADMIN &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&4Admin"
@@ -3846,11 +3827,6 @@ function rankLoad(p: player , n: number , t: number) :: string:
 			set {mineplex.colora.%{_p}%} to "§9"
 			set {mineplex.hover.%{_p}%} to "&9&lMAPPER%nl%&fThese senior members work closely with the development and design teams to build new maps for new and old content!"
 			return "&9Mapper"
-		if {mineplex.rank.%{_p}%} is "&6&lJR.DEV ":
-			set {mineplex.displaya.%{_p}%} to "&6Jr.Dev"
-			set {mineplex.colora.%{_p}%} to "§c"
-			set {mineplex.hover.%{_p}%} to "&6&lJR.DEV%nl%&fThese are part time Developers that work behind the%nl%&fscenes to create new games and features,%nl%&fand fix bugs to give the best experience."
-			return "&6Jr.Dev"
 		if {mineplex.rank.%{_p}%} is "&4&lDEV ":
 			set {_p} tab name to "&4&lDEV &e%{_p}%"
 			set {mineplex.displaya.%{_p}%} to "&4Dev"
